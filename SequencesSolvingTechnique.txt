@@ -1,0 +1,38 @@
+At first table creation then sequences created
+
+***table creation
+
+create table Test_d( T_id varchar2(20)primary key,
+
+T_name varchar2(20))
+
+***How to describe a table?
+desc favbook
+
+01.How to create sequences?
+
+ 
+create sequence test_d_sq
+start with 101
+increment by 2
+maxvalue 110
+nocycle 
+nocache
+
+02.How to check Sequences?
+
+select *
+from user_sequences
+
+03.How to insert value?
+
+insert into Test_d (T_id,T_name) values (Test_d_sq.nextval,'DB')
+
+04. How to sequence Modification?
+
+alter sequence test_d_sq 
+maxvalue 120
+cache 23
+
+05. How to drop sequences?
+ drop sequence test_d_sq
